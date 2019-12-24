@@ -13,6 +13,8 @@ app.use(cookieParser());
 // 	res.send('hello world')
 // })
 
+var db = mongoose.connect('mongodb://localhost:27017/myDbs');
+
 app.all('*', (req, res, next) => {
   // console.log(1);
   // console.log(req.headers)
